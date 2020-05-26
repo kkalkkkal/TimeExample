@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView; // 숫자가 나오는 텍스트뷰
     MyTimer myTimer; // 타이머 객체 생성
     ProgressBar prog = null;
+    int MAX_Timer = 60;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
     //프로그래스bar를 초기화하는 함수
     public void initProg(){
-        prog.setMax(10);//최대값 10 지정
-        prog.setProgress(10); //현재값 10 지정
+        prog.setMax(MAX_Timer);//최대값 10 지정
+        prog.setProgress(MAX_Timer); //현재값 10 지정
     }
 
 
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                         if (currprog > 0) {
                             currprog = currprog - 1;
                         } else if (currprog == 0) { // 타이머가 끝났을 때
-                            currprog = 10;
+                            currprog = MAX_Timer;
                         }
                         prog.setProgress(currprog);
                     }
