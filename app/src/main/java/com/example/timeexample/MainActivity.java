@@ -34,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.btnStart:
                 myTimer.start();//
+                //decreaseBar();
                 break;
             case R.id.btnReset :
                 myTimer.cancel();
                 textView.setText("60 초");
+                initProg();
                 break;
 
         }
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onTick(long millisUntilFinished) {
             textView.setText(millisUntilFinished/1000 + " 초");
+            decreaseBar();
         }
 
         @Override
@@ -64,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
 
     //프로그래스bar를 초기화하는 함수
     public void initProg(){
-        prog.setMax(6);//최대값 6 지정
-        prog.setProgress(6); //현재값 6 지정
+        prog.setMax(10);//최대값 10 지정
+        prog.setProgress(10); //현재값 10 지정
     }
 
 
@@ -80,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
                         if (currprog > 0) {
                             currprog = currprog - 1;
-                        } else if (currprog == 0) {
-                            currprog = 6;
+                        } else if (currprog == 0) { // 타이머가 끝났을 때
+                            currprog = 10;
                         }
                         prog.setProgress(currprog);
                     }

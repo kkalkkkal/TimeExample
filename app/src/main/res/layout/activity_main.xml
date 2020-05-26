@@ -50,9 +50,17 @@
 
         <ProgressBar
             android:id="@+id/TimerProgressBar"
-            style="?android:attr/progressBarStyleHorizontal"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
-            android:layout_height="123dp" />
+            android:layout_height="120dp"
+            android:maxHeight="20dip"
+            android:minHeight="20dip"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:progressBackgroundTint="#00BCD4"
+            android:progressTint="#8BC34A"
+            android:scaleY="20"
+            android:scrollbarSize="5dp" />
 
     </LinearLayout>
 
