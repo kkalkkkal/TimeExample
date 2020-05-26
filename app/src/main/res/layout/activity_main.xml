@@ -48,6 +48,12 @@
                 android:text="Reset" />
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/TimerProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="123dp" />
+
     </LinearLayout>
 
 </LinearLayout>
