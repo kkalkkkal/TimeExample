@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
 
-    TextView textView;
+    TextView textView; // asdfsadfoijdsoaifj
     MyTimer myTimer;//ghjdfg
 
     @Override
